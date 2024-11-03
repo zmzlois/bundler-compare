@@ -6,7 +6,7 @@ import svgr from "vite-plugin-svgr"
 function print() {
   return (config: UserConfig) => {
     // @ts-expect-error it works shut up
-    console.log("config", config)
+    console.log("config.plugins", Object.values(config.plugins))
     return config
   }
 }
